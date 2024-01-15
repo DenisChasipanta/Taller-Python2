@@ -1,0 +1,34 @@
+<!--Heredando del template padre-->
+{% extends "core/base.html" %} {% block title %}Blog{% endblock %}
+<!--Imagen cabecera-->
+{% block background%} {% load static %} {% static 'core/img/ultimos_lanzamientos.jpg'%}{%endblock%}
+<!--Titulo y descipcion-->
+{% block header%}
+{% load static %} 
+<h1>Blog</h1>
+{%endblock%} 
+{% block content %}
+<header>
+    <h1>Blog de la Tienda de Películas</h1>
+    <p>Explora nuestras recomendaciones, novedades y más.</p>
+</header>
+
+<main>
+    <article>
+        <img src="pelicula1.jpg" alt="Película 1">
+        <h2>Reseña de Película 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt, justo vel bibendum finibus, turpis mauris feugiat metus.</p>
+        <a href="#">Leer más</a>
+    </article>
+
+    <article>
+        <img src="pelicula2.jpg" alt="Película 2">
+        <h2>Noticias sobre Película 2</h2>
+        <p>Integer at ultricies tortor. Nulla facilisi. Duis vitae arcu vel neque ullamcorper imperdiet. Aenean sit amet quam sit amet elit consectetur tristique.</p>
+        <a href="#">Leer más</a>
+    </article>
+
+    <!-- Agrega más artículos según sea necesario -->
+
+</main>
+{% endblock  %}

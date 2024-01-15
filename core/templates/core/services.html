@@ -1,0 +1,30 @@
+<!--Heredando del template padre-->
+{% extends "core/base.html" %} {% block title %}Servicios{% endblock %}
+<!--Imagen cabecera-->
+{% block background%} {% load static %} {% static 'core/img/ultimos_lanzamientos.jpg'%}{%endblock%}
+<!--Titulo y descipcion-->
+{% block header%} 
+<h1>Servicios</h1>
+{%endblock%} 
+{% block content %}
+<section>
+    <div class="pelicula">
+        <img src="url_de_la_imagen_pelicula1.jpg" alt="Pelicula 1">
+        <h2>Pelicula 1</h2>
+        <p>Descripción de la película 1.</p>
+        <p>Precio: $19.99</p>
+        <button>Añadir al carrito</button>
+    </div>
+
+    <div class="pelicula">
+        <img src="url_de_la_imagen_pelicula2.jpg" alt="Pelicula 2">
+        <h2>Pelicula 2</h2>
+        <p>Descripción de la película 2.</p>
+        <p>Precio: $24.99</p>
+        <button>Añadir al carrito</button>
+    </div>
+
+    <!-- Agrega más películas según sea necesario -->
+
+</section>
+{% endblock  %}

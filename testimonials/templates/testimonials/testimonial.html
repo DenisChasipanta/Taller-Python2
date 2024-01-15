@@ -1,0 +1,29 @@
+<!--Heredando del template padre-->
+{% extends "core/base.html" %} {% block title %}Testimonios{% endblock %}
+<!--Imagen cabecera-->
+{% block background%} {% load static %} {% static 'core/img/ultimos_lanzamientos.jpg'%}{%endblock%}
+<!--Titulo y descipcion-->
+{% block header%}
+{% load static %} 
+<h1>Testimonios</h1>
+{%endblock%} 
+{% block content %}
+{% for testimonial in testimonials%}
+<h1>Testimonios de Clientes</h1>
+
+    <div class="testimonial">
+        <p>"Increíble selección de películas y precios competitivos. Siempre encuentro lo que estoy buscando."</p>
+        <p class="author">- María López</p>
+    </div>
+
+    <div class="testimonial">
+        <p>"La experiencia de compra en esta tienda es genial. La interfaz es fácil de usar y la entrega es rápida. ¡Altamente recomendado!"</p>
+        <p class="author">- Juan Pérez</p>
+    </div>
+
+    <div class="testimonial">
+        <p>"La atención al cliente es excepcional. Me ayudaron a encontrar una película específica y fueron muy amables. Volveré."</p>
+        <p class="author">- Ana Ramírez</p>
+    </div>
+{% endfor %}
+{% endblock  %}
